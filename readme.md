@@ -2,7 +2,7 @@
 <b>Y</b>et <b>A</b>nother <b>D</b>ecent <b>O</b>perating <b>S</b>system
 
 ## Requirements
- * i686-elf-gcc [AUR](https://aur.archlinux.org/packages/i686-elf-gcc/)
- * i686-elf-binutils [AUR](https://aur.archlinux.org/packages/i686-elf-binutils/)
+ * i686-elf-gcc [(AUR)](https://aur.archlinux.org/packages/i686-elf-gcc/)
+ * i686-elf-binutils [(AUR)](https://aur.archlinux.org/packages/i686-elf-binutils/)
 
 Set up for arch, not tested on other platforms
