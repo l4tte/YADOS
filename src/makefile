@@ -1,5 +1,5 @@
 ASMARGS=-felf32
-COMPARGS=-x c -c -C -std=gnu99 -nostdlib -ffreestanding -Wall -Wextra -O2
+COMPARGS=-x c -c -C -std=gnu99 -nostdlib -ffreestanding -Wall -Wextra -O2 -m32
 
 compile: boot.asm main.c
 	nasm $(ASMARGS) boot.asm -o ../build/asm.o

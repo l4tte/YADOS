@@ -9,13 +9,14 @@ CHECKSUM equ -(MAGIC + FLAGS)
 [GLOBAL gdt_flush]
 [EXTERN kmain]
 
-section .multiboot
-  align 4
-    dd MAGIC
-    dd FLAGS
-    dd CHECKSUM
-
 section .text
+
+align 4
+  dd MAGIC
+  dd FLAGS
+  dd CHECKSUM
+
+
 jmp start
 gdt_flush:
   extern gp         ; Will be defined in C file
@@ -27,7 +28,9 @@ gdt_flush:
   mov fs, ax
   mov gs, ax
   mov ss, ax
+  ret
 start:
+  mov esp, stack
   extern kmain
   call kmain
 .hang:
@@ -36,4 +39,4 @@ start:
 
 SECTION .bss
     resb 8192               ; This reserves 8KBytes of memory here
-_sys_stack:
+stack:

@@ -65,9 +65,11 @@ void outportb (unsigned short _port, unsigned char _data)
 
 int kmain()
 {
-  //gdt_install();
+  gdt_install();
   init_video();
-  puts("YADOS Version 0.0.1");
+  puts("Booting YADOS...\n");
+  puts("GDT successfully loaded\n");
+  settextcolor(0xA, 0x00);
   // Loop forever
   for(;;);
 }
